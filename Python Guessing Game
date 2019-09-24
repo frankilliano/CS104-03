@@ -1,0 +1,40 @@
+import random
+TheComputerNumber = (random.randint(1,1000000))
+LowGuessRange = 1
+HighGuessRange = 1000000
+NumberOfGuesses = 0
+GameOver = False 
+
+while not GameOver: 
+    print("Guess a number between ",(LowGuessRange,HighGuessRange))
+    PlayerGuess = int(input("Enter a guess: "))
+
+    if NumberOfGuesses == 20: 
+        GameOver = True 
+
+    if (PlayerGuess > HighGuessRange or PlayerGuess < LowGuessRange):
+        print("Guess out of range")
+        print("Total Guesses:" , str(NumberOfGuesses))
+        continue
+
+    if PlayerGuess == TheComputerNumber:
+        print("You win!")
+        GameOver = True 
+        continue
+
+    elif PlayerGuess > TheComputerNumber:
+        print("Guess too high")
+        HighGuessRange = PlayerGuess
+        print(LowGuessRange , HighGuessRange)
+        NumberOfGuesses = NumberOfGuesses + 1 
+        print("Total Guesses:" , str(NumberOfGuesses))
+        continue
+
+    elif PlayerGuess < TheComputerNumber: 
+        print("Guess too low")
+        LowGuessRange = PlayerGuess
+        print(LowGuessRange , HighGuessRange)
+        NumberOfGuesses = NumberOfGuesses + 1 
+        print("Total Guesses:" , str(NumberOfGuesses))
+        print(NumberOfGuesses)
+        continue
