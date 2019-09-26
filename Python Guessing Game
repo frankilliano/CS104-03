@@ -9,8 +9,10 @@ while not GameOver:
     print("Guess a number between ",(LowGuessRange,HighGuessRange))
     PlayerGuess = int(input("Enter a guess: "))
 
-    if NumberOfGuesses == 20: 
+    if NumberOfGuesses == 19: 
         GameOver = True 
+        print("Game over")
+        print(TheComputerNumber)
 
     if (PlayerGuess > HighGuessRange or PlayerGuess < LowGuessRange):
         print("Guess out of range")
