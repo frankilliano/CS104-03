@@ -8,7 +8,7 @@ while KeepSearching:
     if search in names:
         print("The name was found")
         continue
-    if search is 'end':
+    if search is 'End':
         KeepSearching = False
     else:
         print ("The name was not found")
