@@ -1,0 +1,13 @@
+#Sum/Average Program 
+#Frank Illiano 
+#s1288616
+
+tot = 0
+NumberList = []
+for x in range (0,20):
+    num = int(input("Enter a number: ")) 
+    NumberList.append(num)
+for x in range (0,20): 
+    tot = tot + NumberList[x]
+print("The sum of the numbers you entered is:", tot)
+print("The average of the numbers you entered is:", tot/20)
